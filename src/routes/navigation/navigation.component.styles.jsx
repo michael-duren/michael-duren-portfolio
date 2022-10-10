@@ -29,7 +29,16 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   display: flex;
+  transition: filter 300ms;
   /* justify-content: flex-start; */
+`;
+
+export const NavLinkContainer = styled.div`
+  &:hover {
+    background-color: var(--bg);
+    border-radius: 2rem;
+    height: 100%;
+  }
 `;
 
 export const NavLink = styled.a`
@@ -38,6 +47,8 @@ export const NavLink = styled.a`
   color: white;
   font-size: 1.5rem;
   justify-items: flex-start;
+
+  /* width: calc((var(--nav-size) * 0.8)); */
 `;
 
 export const TimeContainer = styled.div`
@@ -51,13 +62,20 @@ export const TimeContainer = styled.div`
 `;
 
 export const SearchBarContainer = styled.div`
-  /* padding: 10px 15px; */
-  color: white;
-  font-size: 1.5rem;
-  justify-items: flex-end;
-  flex: 1 1 10rem;
-  text-align: end;
-  margin-right: 0;
-  align-items: center;
-  /* padding-right: 4rem; */
+  margin-left: 1rem;
+  &:hover {
+    height: 100%;
+    background-color: var(--bg);
+    border-radius: 2rem;
+    padding: 0.3rem;
+  }
+`;
+
+export const ReactLogoContainer = styled.div`
+  padding: 0 0.5rem;
+
+  &:hover {
+    background-color: var(--bg);
+    border-radius: 2rem;
+  }
 `;
