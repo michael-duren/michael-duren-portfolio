@@ -10,6 +10,11 @@ export const NavigationContainer = styled.div`
   justify-content: flex-start;
   border-radius: 2rem;
   width: 100%;
+  transition-duration: 2s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 `;
 
 export const ReactLogo = styled(Logo)`
@@ -36,11 +41,23 @@ export const NavLink = styled.a`
 `;
 
 export const TimeContainer = styled.div`
-  padding: 10px 15px;
+  /* padding: 10px 15px; */
   color: white;
   font-size: 1.5rem;
   justify-items: flex-end;
   flex: 1 1 10rem;
   text-align: end;
   padding-right: 4rem;
+`;
+
+export const SearchBarContainer = styled.div`
+  /* padding: 10px 15px; */
+  color: white;
+  font-size: 1.5rem;
+  justify-items: flex-end;
+  flex: 1 1 10rem;
+  text-align: end;
+  margin-right: 0;
+  align-items: center;
+  /* padding-right: 4rem; */
 `;
