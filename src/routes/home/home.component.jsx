@@ -1,8 +1,13 @@
+import { Title } from './home.component.styles';
+
 const Home = () => {
   return (
-    <div>
-      <h1>Michael Duren</h1>
-    </div>
+    <>
+      <Title>
+        <h1>Michael Duren</h1>
+        <p>&copy;2022</p>
+      </Title>
+    </>
   );
 };
 

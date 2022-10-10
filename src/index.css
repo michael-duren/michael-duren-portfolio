@@ -3,9 +3,16 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(98, 153, 160, 0.3);
+  /* background-color: rgba(98, 153, 160, 0.3);
   backdrop-filter: blur(5px);
-  background-image: url('./assets/Background.png');
+  background-image: url('./assets/Background.png'); */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(3, 3, 40, 1) 11%,
+    rgba(169, 240, 255, 1) 100%
+  );
 }
 
 code {
