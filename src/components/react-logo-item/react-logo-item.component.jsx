@@ -5,7 +5,7 @@ import {
 
 import { useState } from 'react';
 
-const ReactLogoLink = (props) => {
+const ReactLogoMenu = (props) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,4 +16,4 @@ const ReactLogoLink = (props) => {
   );
 };
 
-export default ReactLogoLink;
+export default ReactLogoMenu;

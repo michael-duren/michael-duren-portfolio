@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { ReactComponent as Logo } from '../../assets/React-icon.svg';
+import { Link } from 'react-router-dom';
 
-export const ReactLogoContainer = styled.a`
+export const ReactLogoContainer = styled(Link)`
   padding: 0 0.5rem 0;
   margin: 0 1rem;
   cursor: pointer;

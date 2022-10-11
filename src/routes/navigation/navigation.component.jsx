@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import SearchBar from '../../components/search/search.component';
 import Dock from '../../components/dock/dock.component';
@@ -6,17 +6,16 @@ import Dock from '../../components/dock/dock.component';
 import DropDownMenu from '../../components/dropdown-menu/dropdown-menu.component';
 
 import NavItem from '../../components/nav-item/nav-item.component';
-import ReactLogoLink from '../../components/react-logo-item/react-logo-item.component';
+import ReactLogoMenu from '../../components/react-logo-item/react-logo-item.component';
 
 import {
   NavigationContainer,
   NavLinks,
   TimeContainer,
   SearchBarContainer,
-  ReactLogoContainer,
 } from './navigation.component.styles';
 
-const reactMenu = [['About This Michael', 'about']];
+const reactMenu = [['About This Michael', '/about']];
 
 const fileMenu = [
   ['Crwn-Clothing', 'https://github.com/michaeldit/crwn-clothing'],
@@ -31,15 +30,15 @@ const Navigation = () => {
   return (
     <>
       <NavigationContainer>
-        <ReactLogoLink>
-          <DropDownMenu items={reactMenu} />
-        </ReactLogoLink>
+        <ReactLogoMenu>
+          <DropDownMenu items={reactMenu} scope="internal" />
+        </ReactLogoMenu>
         <NavLinks>
           <NavItem name="File">
-            <DropDownMenu items={fileMenu} popup="true" />
+            <DropDownMenu items={fileMenu} scope="external" />
           </NavItem>
           <NavItem link="/" name="View" />
-          <NavItem link="/" name="Go" />
+          <NavItem name="Go" />
           <SearchBarContainer>
             <SearchBar />
           </SearchBarContainer>

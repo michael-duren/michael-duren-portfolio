@@ -4,14 +4,16 @@ import {
   DropDownItemsButton,
 } from './dropdown-menu.component.styles';
 
+import { Link } from 'react-router-dom';
+
 const DropDownMenu = (props) => {
-  const { items, popup } = props;
+  const { items, scope } = props;
 
   return (
     <DropDownContainer>
       <DropDownItems>
         {items.map((item, idx) => {
-          if (popup) {
+          if (scope === 'external') {
             return (
               <DropDownItemsButton key={idx}>
                 <a href={item[1]} target="_blank" rel="noreferrer noopener">
@@ -22,7 +24,7 @@ const DropDownMenu = (props) => {
           } else {
             return (
               <DropDownItemsButton key={idx}>
-                <a href={item[1]}>{item[0]}</a>
+                <Link to={item[1]}>{item[0]}</Link>
               </DropDownItemsButton>
             );
           }
@@ -33,18 +35,3 @@ const DropDownMenu = (props) => {
 };
 
 export default DropDownMenu;
-
-{
-  /* <DropDownItemsButton>
-          <a>Crwn-Clothing</a>
-        </DropDownItemsButton>
-        <DropDownItemsButton>
-          <a>Michael Duren</a>
-        </DropDownItemsButton>
-        <DropDownItemsButton>
-          <a>Password Generator</a>
-        </DropDownItemsButton>
-        <DropDownItemsButton>
-          <a>To Do (Coming soon)</a>
-        </DropDownItemsButton> */
-}

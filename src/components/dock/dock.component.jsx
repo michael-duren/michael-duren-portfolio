@@ -1,12 +1,7 @@
-import { ReactComponent as GitHub } from '../../assets/github-white.svg';
+import { ReactComponent as GitHub } from '../../assets/github-dock-white.svg';
 import { ReactComponent as Music } from '../../assets/music-white.svg';
 
-import {
-  DockButton,
-  DockItem,
-  DockContainer,
-  DockItemContainer,
-} from './dock.componet.styles';
+import { DockButton, DockItem, DockContainer } from './dock.componet.styles';
 
 const Dock = () => {
   return (

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { ReactComponent as Logo } from '../../assets/React-icon.svg';
 
 export const NavigationContainer = styled.div`
   margin-top: 0.2rem;
@@ -18,11 +17,6 @@ export const NavigationContainer = styled.div`
   }
 `;
 
-export const ReactLogo = styled(Logo)`
-  /* height: 100%; */
-  width: 2rem;
-  /* padding: 2rem; */
-`;
 export const NavLinks = styled.div`
   width: 50%;
   height: 100%;
@@ -50,15 +44,5 @@ export const SearchBarContainer = styled.div`
     background-color: var(--bg);
     border-radius: 2rem;
     padding: 0.3rem;
-  }
-`;
-
-export const ReactLogoContainer = styled.div`
-  padding: 0 0.5rem 0;
-  margin: 0 1rem;
-
-  &:hover {
-    background-color: var(--bg);
-    border-radius: 2rem;
   }
 `;
