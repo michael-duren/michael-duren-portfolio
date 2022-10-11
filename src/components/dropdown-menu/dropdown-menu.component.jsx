@@ -5,17 +5,27 @@ import {
 } from './dropdown-menu.component.styles';
 
 const DropDownMenu = (props) => {
-  const { items } = props;
+  const { items, popup } = props;
 
   return (
     <DropDownContainer>
       <DropDownItems>
-        {items.map((item) => {
-          return (
-            <DropDownItemsButton>
-              <a>{item}</a>
-            </DropDownItemsButton>
-          );
+        {items.map((item, idx) => {
+          if (popup) {
+            return (
+              <DropDownItemsButton key={idx}>
+                <a href={item[1]} target="_blank" rel="noreferrer noopener">
+                  {item[0]}
+                </a>
+              </DropDownItemsButton>
+            );
+          } else {
+            return (
+              <DropDownItemsButton key={idx}>
+                <a href={item[1]}>{item[0]}</a>
+              </DropDownItemsButton>
+            );
+          }
         })}
       </DropDownItems>
     </DropDownContainer>
