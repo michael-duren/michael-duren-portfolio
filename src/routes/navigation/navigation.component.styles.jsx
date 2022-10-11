@@ -2,18 +2,19 @@ import styled from 'styled-components';
 import { ReactComponent as Logo } from '../../assets/React-icon.svg';
 
 export const NavigationContainer = styled.div`
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
   background-color: rgba(0, 0, 0, 0.5);
-  min-height: 0.7rem;
+  min-height: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   border-radius: 2rem;
   width: 100%;
-  transition-duration: 2s;
+  transition-duration: 500ms;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.1rem 0 0 0;
   }
 `;
 
@@ -21,7 +22,6 @@ export const ReactLogo = styled(Logo)`
   /* height: 100%; */
   width: 2rem;
   /* padding: 2rem; */
-  margin: 0 2rem;
 `;
 export const NavLinks = styled.div`
   width: 50%;
@@ -31,24 +31,6 @@ export const NavLinks = styled.div`
   display: flex;
   transition: filter 300ms;
   /* justify-content: flex-start; */
-`;
-
-export const NavLinkContainer = styled.div`
-  &:hover {
-    background-color: var(--bg);
-    border-radius: 2rem;
-    height: 100%;
-  }
-`;
-
-export const NavLink = styled.a`
-  padding: 10px 15px;
-  cursor: pointer;
-  color: white;
-  font-size: 1.5rem;
-  justify-items: flex-start;
-
-  /* width: calc((var(--nav-size) * 0.8)); */
 `;
 
 export const TimeContainer = styled.div`
@@ -72,7 +54,8 @@ export const SearchBarContainer = styled.div`
 `;
 
 export const ReactLogoContainer = styled.div`
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0;
+  margin: 0 1rem;
 
   &:hover {
     background-color: var(--bg);

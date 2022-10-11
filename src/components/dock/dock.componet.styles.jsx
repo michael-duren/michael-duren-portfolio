@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 
 export const DockButton = styled.button`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   transition-duration: 3s;
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  @keyframes fadeInAnimation {
+    0% {
+      margin-bottom: 0rem;
+    }
+    100% {
+      margin-bottom: 1rem;
+    }
   }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  animation: fadeInAnimation ease 3s;
 `;
 
 export const DockItem = styled.a`
