@@ -41,21 +41,32 @@ const AboutOverview = () => {
 };
 
 const About = () => {
-  const [content, setContent] = useState(true);
+  const [content, setContent] = useState('overview');
 
   const onClickOverview = () => {
-    if (content) {
+    if (content === 'overview') {
       return;
     } else {
-      setContent(!content);
+      setContent('overview');
     }
   };
 
   const onClickUses = () => {
-    if (!content) {
+    if (content === 'uses') {
       return;
     } else {
-      setContent(!content);
+      setContent('uses');
+    }
+  };
+
+  const renderAboutComponent = () => {
+    switch (content) {
+      case 'overview':
+        return <AboutOverview />;
+      case 'uses':
+        return <AboutUses />;
+      default:
+        throw new Error(`Unhandled content ${content}, in about component`);
     }
   };
 
@@ -70,8 +81,7 @@ const About = () => {
           </IconButton>
         </MenuButtons>
       </NavContainer>
-      {content && <AboutOverview />}
-      {!content && <AboutUses />}
+      {renderAboutComponent()}
     </AboutContainer>
   );
 };
