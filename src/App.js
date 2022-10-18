@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import useLocalStorage from 'use-local-storage';
 
 import Home from './routes/home/home.component';
 import About from './routes/about/about.component';

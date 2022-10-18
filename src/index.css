@@ -3,13 +3,8 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(3, 3, 40, 1) 11%,
-    rgba(169, 240, 255, 1) 100%
-  );
+  /* background: rgb(2, 0, 36); */
+  background: var(--background)
 }
 
 code {
@@ -18,11 +13,24 @@ code {
 }
 
 :root {
+  --background:   linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(3, 3, 40, 1) 11%,
+    rgba(169, 240, 255, 1) 100%
+  );
   --bg: rgba(244, 244, 244, 0.5);
   --bg-accent: background-color: rgba(0, 0, 0, 0.5);
   --speed: 500ms
   --border-radius: 2rem;
   --nav-size: 60px;
+}
+
+[data-theme='light'] {
+  --background: white;
+  --text-primary: black;
+  --text-secondary: royalBlue;
+  --accent: purple
 }
 
 ul {

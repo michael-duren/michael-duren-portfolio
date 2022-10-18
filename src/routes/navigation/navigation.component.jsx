@@ -15,13 +15,39 @@ import {
   SearchBarContainer,
 } from './navigation.component.styles';
 
-const reactMenu = [['About This Michael', '/about']];
+const reactMenu = [['About This Michael', '/about', 'internal-link']];
 
 const fileMenu = [
-  ['Crwn-Clothing', 'https://github.com/michaeldit/crwn-clothing'],
-  ['Michael Duren', 'https://github.com/michaeldit/michael-duren-portfolio'],
-  ['Password Generator', 'https://github.com/michaeldit/passwordGenerator'],
-  ['To Do App', 'https://github.com/michaeldit/passwordGenerator'],
+  [
+    'Crwn-Clothing',
+    'https://github.com/michaeldit/crwn-clothing',
+    'external-link',
+  ],
+  [
+    'Michael Duren',
+    'https://github.com/michaeldit/michael-duren-portfolio',
+    'external-link',
+  ],
+  [
+    'Password Generator',
+    'https://github.com/michaeldit/passwordGenerator',
+    'external-link',
+  ],
+  [
+    'To Do App',
+    'https://github.com/michaeldit/passwordGenerator',
+    'external-link',
+  ],
+];
+
+const viewMenu = [['Light/Dark', null, 'button']];
+
+const goMenu = [
+  ['Home', '/', 'internal-link'],
+  ['About', 'About', 'internal-link'],
+  ['LinkedIn', 'https://www.linkedin.com/in/michael-duren/', 'external-link'],
+  ['Github', 'https://github.com/michaeldit', 'external-link'],
+  ['Contact', 'mailto:michaeld@michaelduren.com', 'external-link'],
 ];
 
 const Navigation = () => {
@@ -31,14 +57,18 @@ const Navigation = () => {
     <>
       <NavigationContainer>
         <ReactLogoMenu>
-          <DropDownMenu items={reactMenu} scope="internal" />
+          <DropDownMenu items={reactMenu} />
         </ReactLogoMenu>
         <NavLinks>
           <NavItem name="File">
-            <DropDownMenu items={fileMenu} scope="external" />
+            <DropDownMenu items={fileMenu} />
           </NavItem>
-          <NavItem link="/" name="View" />
-          <NavItem name="Go" />
+          <NavItem name="View">
+            <DropDownMenu items={viewMenu} />
+          </NavItem>
+          <NavItem name="Go">
+            <DropDownMenu items={goMenu} />
+          </NavItem>
           <SearchBarContainer>
             <SearchBar />
           </SearchBarContainer>
