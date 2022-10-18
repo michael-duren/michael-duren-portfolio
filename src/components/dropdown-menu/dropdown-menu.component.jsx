@@ -32,7 +32,7 @@ const DropDownMenu = (props) => {
                 </DropDownItemsButton>
               );
             case 'button':
-              return <ToggleSwitch onClick={location} key={idx} />;
+              return <ToggleSwitch key={idx} />;
             default:
               throw new Error(`${type} is not a valid element`);
           }
