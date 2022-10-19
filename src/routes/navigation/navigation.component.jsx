@@ -1,13 +1,18 @@
+import { useContext } from 'react';
+
 import { Outlet } from 'react-router-dom';
 
+// Context
+import { ThemeContext } from 'styled-components';
+
+// Components
 import SearchBar from '../../components/search/search.component';
 import Dock from '../../components/dock/dock.component';
-
 import DropDownMenu from '../../components/dropdown-menu/dropdown-menu.component';
-
 import NavItem from '../../components/nav-item/nav-item.component';
 import ReactLogoMenu from '../../components/react-logo-item/react-logo-item.component';
 
+// Styoles
 import {
   NavigationContainer,
   NavLinks,
@@ -53,6 +58,12 @@ const goMenu = [
 const Navigation = () => {
   const currentDate = new Date().toLocaleDateString();
 
+  const { theme } = useContext(ThemeContext);
+
+  // const themeToggler = () => {
+  //   theme === 'dark' ? setTheme('light') : setTheme('dark');
+  // };
+
   return (
     <>
       <NavigationContainer>
@@ -64,7 +75,9 @@ const Navigation = () => {
             <DropDownMenu items={fileMenu} />
           </NavItem>
           <NavItem name="View">
-            <DropDownMenu items={viewMenu} />
+            {/* <span onClick={themeToggler}>
+              <DropDownMenu items={viewMenu} />
+            </span> */}
           </NavItem>
           <NavItem name="Go">
             <DropDownMenu items={goMenu} />
