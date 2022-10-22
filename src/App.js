@@ -7,7 +7,6 @@ import Home from './routes/home/home.component';
 import About from './routes/about/about.component';
 import Navigation from './routes/navigation/navigation.component';
 import { useLightMode } from './components/use-light-mode/useLightMode';
-import ToggleSwitch from './components/toggle-switch/toggle-switch.component';
 
 const App = () => {
   const theme = useContext(ThemeContext);

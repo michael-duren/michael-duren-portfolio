@@ -67,7 +67,6 @@ const Navigation = () => {
             <DropDownMenu items={fileMenu} />
           </NavItem>
           <NavItem name="View"></NavItem>
-
           <NavItem name="Go">
             <DropDownMenu items={goMenu} />
           </NavItem>

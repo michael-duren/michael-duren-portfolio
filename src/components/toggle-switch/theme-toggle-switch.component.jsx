@@ -4,9 +4,9 @@ import {
   CheckBoxWrapper,
   CheckBox,
   CheckBoxLabel,
-} from './toggle-switch.component.styles';
+} from './theme-toggle-switch.component.styles';
 
-const ToggleSwitch = ({ theme, toggleTheme }) => {
+const ThemeToggleSwitch = ({ theme, toggleTheme }) => {
   return (
     <>
       <CheckBoxWrapper>
@@ -22,9 +22,9 @@ const ToggleSwitch = ({ theme, toggleTheme }) => {
   );
 };
 
-ToggleSwitch.propTypes = {
+ThemeToggleSwitch.propTypes = {
   theme: string.isRequired,
   toggleTheme: func.isRequired,
 };
 
-export default ToggleSwitch;
+export default ThemeToggleSwitch;

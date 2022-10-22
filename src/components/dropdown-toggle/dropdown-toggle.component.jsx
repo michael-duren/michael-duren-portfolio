@@ -6,18 +6,18 @@ import {
   DropDownItemsButton,
 } from './dropdown-toggle.styles';
 
-import ToggleSwitch from '../toggle-switch/toggle-switch.component';
+import ThemeToggleSwitch from '../toggle-switch/theme-toggle-switch.component';
 import { useLightMode } from '../use-light-mode/useLightMode';
 import { ThemeContext } from 'styled-components';
 
 const DropDownToggle = () => {
-  const [theme, toggleTheme] = useContext(ThemeContext);
+  // const [theme, toggleTheme] = useContext(ThemeContext);
 
   return (
     <DropDownContainer>
       <DropDownItems>
         {/* <DropDownItemsButton> */}
-        <ToggleSwitch theme={theme} toggleTheme={toggleTheme} />
+        {/* <ThemeToggleSwitch theme={theme} toggleTheme={toggleTheme} /> */}
         {/* </DropDownItemsButton> */}
       </DropDownItems>
     </DropDownContainer>
