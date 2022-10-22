@@ -1,14 +1,10 @@
-import { useContext } from 'react';
-
 import { Outlet } from 'react-router-dom';
-
-// Context
-import { ThemeContext } from 'styled-components';
 
 // Components
 import SearchBar from '../../components/search/search.component';
 import Dock from '../../components/dock/dock.component';
 import DropDownMenu from '../../components/dropdown-menu/dropdown-menu.component';
+import DropDownToggle from '../../components/dropdown-toggle/dropdown-toggle.component';
 import NavItem from '../../components/nav-item/nav-item.component';
 import ReactLogoMenu from '../../components/react-logo-item/react-logo-item.component';
 
@@ -19,6 +15,10 @@ import {
   TimeContainer,
   SearchBarContainer,
 } from './navigation.component.styles';
+
+// import ToggleSwitch from '../../components/toggle-switch/toggle-switch.component';
+
+// import { darkTheme, lightTheme } from '../../Themes';
 
 const reactMenu = [['About This Michael', '/about', 'internal-link']];
 
@@ -45,8 +45,6 @@ const fileMenu = [
   ],
 ];
 
-const viewMenu = [['Light/Dark', null, 'button']];
-
 const goMenu = [
   ['Home', '/', 'internal-link'],
   ['About', 'About', 'internal-link'],
@@ -58,12 +56,6 @@ const goMenu = [
 const Navigation = () => {
   const currentDate = new Date().toLocaleDateString();
 
-  const { theme } = useContext(ThemeContext);
-
-  // const themeToggler = () => {
-  //   theme === 'dark' ? setTheme('light') : setTheme('dark');
-  // };
-
   return (
     <>
       <NavigationContainer>
@@ -74,11 +66,8 @@ const Navigation = () => {
           <NavItem name="File">
             <DropDownMenu items={fileMenu} />
           </NavItem>
-          <NavItem name="View">
-            {/* <span onClick={themeToggler}>
-              <DropDownMenu items={viewMenu} />
-            </span> */}
-          </NavItem>
+          <NavItem name="View"></NavItem>
+
           <NavItem name="Go">
             <DropDownMenu items={goMenu} />
           </NavItem>

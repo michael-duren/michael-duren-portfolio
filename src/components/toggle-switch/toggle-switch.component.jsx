@@ -10,7 +10,12 @@ const ToggleSwitch = ({ theme, toggleTheme }) => {
   return (
     <>
       <CheckBoxWrapper>
-        <CheckBox id="checkbox" type="checkbox" onClick={toggleTheme} />
+        <CheckBox
+          id="checkbox"
+          theme={theme}
+          type="checkbox"
+          onClick={toggleTheme}
+        />
         <CheckBoxLabel htmlFor="checkbox" />
       </CheckBoxWrapper>
     </>

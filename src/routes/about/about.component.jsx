@@ -10,7 +10,7 @@ import {
   MichaelImage,
 } from './about.component.styles';
 
-import michaelAvatar from '../../assets/Avatar.png';
+import michaelAvatar from '../../images/Avatar.png';
 
 const AboutUses = () => {
   return <h1>THIS IS WHAT I USE</h1>;

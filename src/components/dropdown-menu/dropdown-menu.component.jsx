@@ -4,8 +4,6 @@ import {
   DropDownItemsButton,
 } from './dropdown-menu.component.styles';
 
-import ToggleSwitch from '../toggle-switch/toggle-switch.component';
-
 import { Link } from 'react-router-dom';
 
 const DropDownMenu = (props) => {
@@ -31,8 +29,6 @@ const DropDownMenu = (props) => {
                   <Link to={location}>{name}</Link>
                 </DropDownItemsButton>
               );
-            case 'button':
-              return <ToggleSwitch key={idx} />;
             default:
               throw new Error(`${type} is not a valid element`);
           }

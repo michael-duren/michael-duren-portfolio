@@ -1,13 +1,21 @@
-body {
-  margin: 0 1rem;
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* background: rgb(2, 0, 36); */
-  background: var(--background)
-}
+import { createGlobalStyle } from 'styled-components';
 
-code {
+import BackgroundImg from './images/darknight.jpg';
+
+export const GlobalStyles = createGlobalStyle`
+	body {
+		background: ${({ theme }) => theme.body};
+		color: ${({ theme }) => theme.text};
+		background-image: url('${BackgroundImg}');
+		margin: 0 1rem;
+		font-family: 'Inter', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		transition: all 0.50s linear;
+		height: 100vh;
+	}
+
+	code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
@@ -26,12 +34,7 @@ code {
   --nav-size: 60px;
 }
 
-[data-theme='light'] {
-  --background: white;
-  --text-primary: black;
-  --text-secondary: royalBlue;
-  --accent: purple
-}
+
 
 ul {
   list-style: none;
@@ -47,3 +50,4 @@ a {
 button {
   border: none;
 }
+`;
