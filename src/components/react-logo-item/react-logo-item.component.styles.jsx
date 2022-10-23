@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as Logo } from '../../assets/React-icon.svg';
+import { ReactComponent as LogoLight } from '../../assets/light-theme/react-icon-light.svg';
+import { ReactComponent as LogoDark } from '../../assets/dark-theme/react-dark-theme.svg';
 import { Link } from 'react-router-dom';
 
 export const ReactLogoContainer = styled(Link)`
@@ -13,7 +14,13 @@ export const ReactLogoContainer = styled(Link)`
   }
 `;
 
-export const ReactLogo = styled(Logo)`
+export const ReactLogoLight = styled(LogoLight)`
+  /* height: 100%; */
+  width: 2rem;
+  /* padding: 2rem; */
+`;
+
+export const ReactLogoDark = styled(LogoDark)`
   /* height: 100%; */
   width: 2rem;
   /* padding: 2rem; */

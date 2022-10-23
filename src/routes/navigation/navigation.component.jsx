@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import SearchBar from '../../components/search/search.component';
 import Dock from '../../components/dock/dock.component';
 import DropDownMenu from '../../components/dropdown-menu/dropdown-menu.component';
-import DropDownToggle from '../../components/dropdown-toggle/dropdown-toggle.component';
+
 import NavItem from '../../components/nav-item/nav-item.component';
 import ReactLogoMenu from '../../components/react-logo-item/react-logo-item.component';
 

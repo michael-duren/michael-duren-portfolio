@@ -1,7 +1,13 @@
-import { SearchBarIcon } from './search.component.styles';
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+import {
+  SearchBarIconDark,
+  SearchBarIconLight,
+} from './search.component.styles';
 
 const SearchBar = () => {
-  return SearchBarIcon;
-};
+  const { id } = useContext(ThemeContext);
 
-export default SearchBar();
+  return <>{id === 'light' ? <SearchBarIconLight /> : <SearchBarIconDark />}</>;
+};
+export default SearchBar;

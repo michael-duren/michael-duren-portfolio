@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NavigationContainer = styled.div`
   margin-top: 0.2rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${(p) => p.theme.primaryColor};
   min-height: 0.8rem;
   display: flex;
   align-items: center;
@@ -12,7 +12,7 @@ export const NavigationContainer = styled.div`
   transition-duration: 500ms;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: ${(p) => p.theme.primaryColor};
     padding: 0.1rem 0 0 0;
   }
 `;
@@ -29,7 +29,7 @@ export const NavLinks = styled.div`
 
 export const TimeContainer = styled.div`
   /* padding: 10px 15px; */
-  color: white;
+  color: ${(p) => p.theme.bodyFontColor};
   font-size: 1.5rem;
   justify-items: flex-end;
   flex: 1 1 10rem;
@@ -41,7 +41,7 @@ export const SearchBarContainer = styled.div`
   margin-left: 1rem;
   &:hover {
     height: 100%;
-    background-color: var(--bg);
+    background-color: ${(p) => p.theme.primaryColor};
     border-radius: 2rem;
     padding: 0.3rem;
   }

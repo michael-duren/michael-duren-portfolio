@@ -1,12 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
-import BackgroundImg from './images/darknight.jpg';
-
 export const GlobalStyles = createGlobalStyle`
 	body {
-		background: ${({ theme }) => theme.body};
-		color: ${({ theme }) => theme.text};
-		background-image: url('${BackgroundImg}');
+		background: ${(p) => p.theme.bodyBackgroundColor};
+		color: ${(p) => p.theme.bodyFontColor};
 		margin: 0 1rem;
 		font-family: 'Inter', sans-serif;
 		-webkit-font-smoothing: antialiased;

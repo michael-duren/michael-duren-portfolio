@@ -1,21 +1,26 @@
-import { useContext } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ThemeContext, ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './GlobalStyles';
-import { lightTheme, darkTheme } from './Themes';
 import Home from './routes/home/home.component';
 import About from './routes/about/about.component';
 import Navigation from './routes/navigation/navigation.component';
-import { useLightMode } from './components/use-light-mode/useLightMode';
+import LightTheme from './components/themes/light';
+import DarkTheme from './components/themes/dark';
 
 const App = () => {
-  const theme = useContext(ThemeContext);
-
-  const themeMode = theme === 'dark' ? darkTheme : lightTheme;
+  const [theme, setTheme] = useState(DarkTheme);
 
   // if (!mountedComponent) return <div />;
   return (
-    <ThemeProvider theme={themeMode}>
+    <ThemeProvider
+      theme={{
+        ...theme,
+        setTheme: () => {
+          setTheme((s) => (s.id === 'light' ? DarkTheme : LightTheme));
+        },
+      }}
+    >
       <GlobalStyles />
       <Routes>
         <Route path="/" element={<Navigation />}>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NavLinkContainer = styled.div`
   &:hover {
-    background-color: var(--bg);
+    background-color: ${(props) => props.theme.bodyBackgroundColor};
     border-radius: 2rem;
     height: 100%;
   }
@@ -11,7 +11,7 @@ export const NavLinkContainer = styled.div`
 export const NavLink = styled.a`
   padding: 10px 15px;
   cursor: pointer;
-  color: white;
+  color: ${(props) => props.theme.bodyFontColor};
   font-size: 1.5rem;
   justify-items: flex-start;
 
