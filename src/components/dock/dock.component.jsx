@@ -7,7 +7,7 @@ const Dock = () => {
   return (
     <DockContainer>
       <DockButton>
-        <DockItem href="https://github.com/michaeldit">
+        <DockItem href="https://github.com/michael-duren">
           <GitHub />
         </DockItem>
         <DockItem href="/">

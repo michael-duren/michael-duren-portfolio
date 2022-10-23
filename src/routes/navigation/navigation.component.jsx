@@ -25,22 +25,22 @@ const reactMenu = [['About This Michael', '/about', 'internal-link']];
 const fileMenu = [
   [
     'Crwn-Clothing',
-    'https://github.com/michaeldit/crwn-clothing',
+    'https://github.com/michael-duren/crwn-clothing',
     'external-link',
   ],
   [
     'Michael Duren',
-    'https://github.com/michaeldit/michael-duren-portfolio',
+    'https://github.com/michael-duren/michael-duren-portfolio',
     'external-link',
   ],
   [
     'Password Generator',
-    'https://github.com/michaeldit/passwordGenerator',
+    'https://github.com/michael-duren/passwordGenerator',
     'external-link',
   ],
   [
     'To Do App',
-    'https://github.com/michaeldit/passwordGenerator',
+    'https://github.com/michael-duren/passwordGenerator',
     'external-link',
   ],
 ];
@@ -49,7 +49,7 @@ const goMenu = [
   ['Home', '/', 'internal-link'],
   ['About', 'About', 'internal-link'],
   ['LinkedIn', 'https://www.linkedin.com/in/michael-duren/', 'external-link'],
-  ['Github', 'https://github.com/michaeldit', 'external-link'],
+  ['Github', 'https://github.com/michael-duren', 'external-link'],
   ['Contact', 'mailto:michaeld@michaelduren.com', 'external-link'],
 ];
 
