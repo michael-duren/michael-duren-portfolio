@@ -1,30 +1,9 @@
-import { func, string } from 'prop-types';
+import { ToggleWrapper, Notch } from './theme-toggle-switch.component.styles';
 
-import {
-  CheckBoxWrapper,
-  CheckBox,
-  CheckBoxLabel,
-} from './theme-toggle-switch.component.styles';
-
-const ThemeToggleSwitch = ({ theme, toggleTheme }) => {
+export const Toggle = ({ isActive, onToggle }) => {
   return (
-    <>
-      <CheckBoxWrapper>
-        <CheckBox
-          id="checkbox"
-          theme={theme}
-          type="checkbox"
-          onClick={toggleTheme}
-        />
-        <CheckBoxLabel htmlFor="checkbox" />
-      </CheckBoxWrapper>
-    </>
+    <ToggleWrapper onClick={onToggle}>
+      <Notch isActive={isActive} />
+    </ToggleWrapper>
   );
 };
-
-ThemeToggleSwitch.propTypes = {
-  theme: string.isRequired,
-  toggleTheme: func.isRequired,
-};
-
-export default ThemeToggleSwitch;

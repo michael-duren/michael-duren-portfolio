@@ -1,45 +1,27 @@
 import styled from 'styled-components';
 
-export const CheckBoxWrapper = styled.div`
-  position: relative;
+export const ToggleWrapper = styled.div`
+  width: 50px;
+  min-width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  border: 1px solid #666;
+  margin: auto;
+  display: flex;
+  background-image: linear-gradient(
+    to bottom,
+    ${(p) => p.theme.primaryColor},
+    ${(p) => p.theme.secondaryColor}
+  );
 `;
-export const CheckBoxLabel = styled.label`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 42px;
-  height: 26px;
-  border-radius: 15px;
-  background: black;
-  cursor: pointer;
-  &::after {
-    content: '';
-    display: block;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    margin: 3px;
-    background: #ffffff;
-    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
-    transition: 0.2s;
-  }
-`;
-export const CheckBox = styled.input`
-  opacity: 0;
-  z-index: 1;
-  border-radius: 15px;
-  width: 42px;
-  height: 26px;
-  &:checked + ${CheckBoxLabel} {
-    background: #bebebe;
-    &::after {
-      content: '';
-      display: block;
-      border-radius: 50%;
-      width: 18px;
-      height: 18px;
-      margin-left: 21px;
-      transition: 0.2s;
-    }
-  }
+
+export const Notch = styled.div`
+  height: 21px;
+  width: 21px;
+  border: 1pz solid #666;
+  margin-top: 1px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.1s linear;
+  transform: translate(${(p) => (p.isActive ? '26px' : '1px')});
 `;

@@ -20,38 +20,49 @@ import {
 
 // import { darkTheme, lightTheme } from '../../Themes';
 
-const reactMenu = [['About This Michael', '/about', 'internal-link']];
+const reactMenu = [['About This Michael', '/about', 'internal-lin', '1a']];
 
 const fileMenu = [
   [
     'Crwn-Clothing',
     'https://github.com/michael-duren/crwn-clothing',
     'external-link',
+    '1b',
   ],
   [
     'Michael Duren',
     'https://github.com/michael-duren/michael-duren-portfolio',
     'external-link',
+    '2b',
   ],
   [
     'Password Generator',
     'https://github.com/michael-duren/passwordGenerator',
     'external-link',
+    '3b',
   ],
   [
     'To Do App',
     'https://github.com/michael-duren/passwordGenerator',
     'external-link',
+    '4b',
   ],
 ];
 
 const goMenu = [
-  ['Home', '/', 'internal-link'],
-  ['About', 'About', 'internal-link'],
-  ['LinkedIn', 'https://www.linkedin.com/in/michael-duren/', 'external-link'],
-  ['Github', 'https://github.com/michael-duren', 'external-link'],
-  ['Contact', 'mailto:michaeld@michaelduren.com', 'external-link'],
+  ['Home', '/', 'internal-link', '1c'],
+  ['About', 'About', 'internal-link', '2c'],
+  [
+    'LinkedIn',
+    'https://www.linkedin.com/in/michael-duren/',
+    'external-link',
+    '3c',
+  ],
+  ['Github', 'https://github.com/michael-duren', 'external-link', '4c'],
+  ['Contact', 'mailto:michaeld@michaelduren.com', 'external-link', '5c'],
 ];
+
+const viewMenu = [[null, null, 'button', '1d']];
 
 const Navigation = () => {
   const currentDate = new Date().toLocaleDateString();
@@ -66,7 +77,9 @@ const Navigation = () => {
           <NavItem name="File">
             <DropDownMenu items={fileMenu} />
           </NavItem>
-          <NavItem name="View"></NavItem>
+          <NavItem name="View">
+            <DropDownMenu items={viewMenu} />
+          </NavItem>
           <NavItem name="Go">
             <DropDownMenu items={goMenu} />
           </NavItem>

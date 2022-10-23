@@ -9,7 +9,7 @@ import LightTheme from './components/themes/light';
 import DarkTheme from './components/themes/dark';
 
 const App = () => {
-  const [theme, setTheme] = useState(DarkTheme);
+  const [theme, setTheme] = useState(LightTheme);
 
   // if (!mountedComponent) return <div />;
   return (
