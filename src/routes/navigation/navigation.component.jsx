@@ -16,10 +16,6 @@ import {
   SearchBarContainer,
 } from './navigation.component.styles';
 
-// import ToggleSwitch from '../../components/toggle-switch/toggle-switch.component';
-
-// import { darkTheme, lightTheme } from '../../Themes';
-
 const reactMenu = [['About This Michael', '/about', 'internal-lin', '1a']];
 
 const fileMenu = [
