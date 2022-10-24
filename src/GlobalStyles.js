@@ -17,23 +17,6 @@ export const GlobalStyles = createGlobalStyle`
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-:root {
-  --background:   linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(3, 3, 40, 1) 11%,
-    rgba(169, 240, 255, 1) 100%
-  );
-  --bg: rgba(244, 244, 244, 0.5);
-  --bg-accent: background-color: rgba(0, 0, 0, 0.5);
-  --speed: 500ms
-  --border-radius: 2rem;
-  --nav-size: 60px;
-}
-
-
-
 ul {
   list-style: none;
   margin: 0;
@@ -42,7 +25,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
+  color: ${(props) => props.theme.bodyFontColor};
 }
 
 button {

@@ -4,7 +4,7 @@ const theme = {
   secondaryColor: '#305973',
   dropShadowColor: '#EF7E56',
   bodyBackgroundColor: '#F9F9F9',
-  bodyFontColor: '305973',
+  bodyFontColor: '#305973',
 };
 
 export default theme;

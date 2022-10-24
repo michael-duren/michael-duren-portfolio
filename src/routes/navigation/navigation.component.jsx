@@ -16,7 +16,7 @@ import {
   SearchBarContainer,
 } from './navigation.component.styles';
 
-const reactMenu = [['About This Michael', '/about', 'internal-lin', '1a']];
+const reactMenu = [['About This Michael', '/about', 'internal-link', '1a']];
 
 const fileMenu = [
   [
