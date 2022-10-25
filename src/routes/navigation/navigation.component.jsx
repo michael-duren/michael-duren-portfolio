@@ -68,7 +68,6 @@ const viewMenu = [[null, null, 'button', '1d']];
 const Navigation = () => {
   const currentDate = new Date().toLocaleDateString();
   const { id } = useContext(ThemeContext);
-  console.log(id);
 
   return (
     <>

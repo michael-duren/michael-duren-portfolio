@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 export const DropDownContainer = styled.div`
   position: absolute;
-  top: 2.3rem;
+  top: 3rem;
   /* right: 40px; */
   z-index: 5;
   border-radius: 2rem;
-  background-color: rgba(244, 244, 244, 0.5);
+  background-color: ${(props) => props.theme.primaryColor};
+  filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
+  /* opacity: 0.7; */
   justify-content: flex-start;
+  /* border: 1px solid black; */
 `;
 
 export const DropDownItems = styled.div`
@@ -25,12 +28,12 @@ export const DropDownItemsButton = styled.button`
   text-decoration: none;
   text-align: left;
   &:hover {
-    background-color: rgba(97, 218, 251, 0.5);
+    background-color: ${(props) => props.theme.bodyBackgroundColor};
     cursor: pointer;
     border-radius: 4rem;
 
     a {
-      color: white;
+      color: ${(props) => props.theme.bodyFontColor};
     }
   }
 `;

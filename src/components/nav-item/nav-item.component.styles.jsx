@@ -5,6 +5,7 @@ export const NavLinkContainer = styled.div`
     background-color: ${(props) => props.theme.bodyBackgroundColor};
     border-radius: 2rem;
     height: 100%;
+    filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
   }
 `;
 

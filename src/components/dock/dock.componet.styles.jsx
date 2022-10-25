@@ -10,6 +10,9 @@ export const DockButton = styled.button`
   @keyframes fadeInAnimation {
     0% {
       margin-bottom: 0rem;
+      filter: drop-shadow(
+        5px 5px 10px ${(props) => props.theme.dropShadowColor}
+      );
     }
     100% {
       margin-bottom: 1rem;
@@ -17,7 +20,7 @@ export const DockButton = styled.button`
   }
   &:hover {
     background-color: ${(p) => p.theme.primaryColor};
-    opacity: 0.5;
+    filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
   }
 
   animation: fadeInAnimation ease 3s;

@@ -44,5 +44,6 @@ export const SearchBarContainer = styled.div`
     background-color: ${(props) => props.theme.bodyBackgroundColor};
     border-radius: 2rem;
     padding: 0.3rem;
+    filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
   }
 `;

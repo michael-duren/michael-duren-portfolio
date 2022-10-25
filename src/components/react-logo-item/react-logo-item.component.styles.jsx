@@ -11,6 +11,7 @@ export const ReactLogoContainer = styled(Link)`
   &:hover {
     background-color: ${(props) => props.theme.bodyBackgroundColor};
     border-radius: 2rem;
+    filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
   }
 `;
 

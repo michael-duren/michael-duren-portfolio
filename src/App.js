@@ -9,7 +9,7 @@ import DarkTheme from './components/themes/dark';
 import { GlobalStyles } from './GlobalStyles';
 
 const App = () => {
-  const [theme, setTheme] = useState(LightTheme);
+  const [theme, setTheme] = useState(DarkTheme);
 
   // if (!mountedComponent) return <div />;
   return (
