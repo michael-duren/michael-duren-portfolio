@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { Outlet } from 'react-router-dom';
+import { ThemeContext } from 'styled-components';
 
 // Components
 import SearchBar from '../../components/search/search.component';
@@ -7,7 +9,7 @@ import DropDownMenu from '../../components/dropdown-menu/dropdown-menu.component
 
 import NavItem from '../../components/nav-item/nav-item.component';
 import ReactLogoMenu from '../../components/react-logo-item/react-logo-item.component';
-
+import Initials from '../../components/initials/initials.component';
 // Styoles
 import {
   NavigationContainer,
@@ -15,6 +17,9 @@ import {
   TimeContainer,
   SearchBarContainer,
 } from './navigation.component.styles';
+// images
+import lightInitials from '../../images/initials-light-theme.png';
+import darkInitials from '../../images/initials-dark-theme.png';
 
 const reactMenu = [['About This Michael', '/about', 'internal-link', '1a']];
 
@@ -62,6 +67,8 @@ const viewMenu = [[null, null, 'button', '1d']];
 
 const Navigation = () => {
   const currentDate = new Date().toLocaleDateString();
+  const { id } = useContext(ThemeContext);
+  console.log(id);
 
   return (
     <>
@@ -87,6 +94,10 @@ const Navigation = () => {
       </NavigationContainer>
 
       <Outlet />
+      <Initials
+        src={id === 'light' ? lightInitials : darkInitials}
+        alt="Michael Duren initials"
+      />
       <Dock />
     </>
   );

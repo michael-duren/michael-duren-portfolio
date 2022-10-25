@@ -11,7 +11,7 @@ export const AboutContainer = styled.div`
   height: 50vh;
   min-height: 20rem;
   align-items: center;
-  background-color: rgba(244, 244, 244, 0.5);
+  background-color: ${(p) => p.theme.primaryColor};
   position: fixed;
   top: 50%;
   left: 50%;

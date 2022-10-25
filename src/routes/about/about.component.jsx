@@ -20,7 +20,7 @@ const AboutOverview = () => {
   return (
     <div className="content-container">
       <div className="icon-image">
-        <MichaelImage src={michaelAvatar} alt="Michael Duren" />
+        <MichaelImage src={michaelAvatar} alt="Michael Duren picture" />
       </div>
       <div className="content">
         <h1>

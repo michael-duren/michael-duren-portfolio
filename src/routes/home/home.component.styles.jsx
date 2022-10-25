@@ -16,7 +16,7 @@ export const Title = styled.div`
     margin-bottom: 0;
     background: linear-gradient(
       90deg,
-      rgba(169, 240, 255, 1) 100%,
+      ${(p) => p.theme.bodyFontColor} 100%,
       rgba(3, 3, 40, 1) 11%,
       rgba(2, 0, 36, 1) 0%
     );
