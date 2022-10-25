@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
 import {
   AboutContainer,
   NavContainer,
   MenuButton,
   MenuButtons,
-  CloseWindowX,
+  CloseWindowLight,
+  CloseWindowDark,
   IconButton,
   MichaelImage,
 } from './about.component.styles';
@@ -42,6 +44,7 @@ const AboutOverview = () => {
 
 const About = () => {
   const [content, setContent] = useState('overview');
+  const { id } = useContext(ThemeContext);
 
   const onClickOverview = () => {
     if (content === 'overview') {
@@ -77,7 +80,7 @@ const About = () => {
           <MenuButton onClick={onClickOverview}>Overview</MenuButton>
           <MenuButton onClick={onClickUses}>Uses</MenuButton>
           <IconButton to="/">
-            <CloseWindowX />
+            {id === 'light' ? <CloseWindowLight /> : <CloseWindowDark />}
           </IconButton>
         </MenuButtons>
       </NavContainer>
