@@ -9,7 +9,7 @@ export const ReactLogoContainer = styled(Link)`
   cursor: pointer;
 
   &:hover {
-    background-color: var(--bg);
+    background-color: ${(props) => props.theme.bodyBackgroundColor};
     border-radius: 2rem;
   }
 `;

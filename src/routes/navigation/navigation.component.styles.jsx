@@ -41,7 +41,7 @@ export const SearchBarContainer = styled.div`
   margin-left: 1rem;
   &:hover {
     height: 100%;
-    background-color: ${(p) => p.theme.primaryColor};
+    background-color: ${(props) => props.theme.bodyBackgroundColor};
     border-radius: 2rem;
     padding: 0.3rem;
   }
