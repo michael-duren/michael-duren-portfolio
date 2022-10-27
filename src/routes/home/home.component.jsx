@@ -5,7 +5,6 @@ const Home = () => {
     <>
       <Title>
         <h1>Michael Duren</h1>
-        <p>&copy;2022</p>
       </Title>
     </>
   );

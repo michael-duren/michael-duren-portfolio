@@ -8,12 +8,9 @@ export const DropDownContainer = styled.div`
   background-color: ${(props) => props.theme.primaryColor};
   filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
   margin: 0.5rem;
-
-  /* justify-content: flex-start; */
 `;
 
 export const DropDownItem = styled.div`
-  /* margin: 2rem auto; */
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -21,7 +18,6 @@ export const DropDownItem = styled.div`
 `;
 
 export const DropDownItemButton = styled.button`
-  /* margin: auto; */
   border: none;
   font-size: 1.5rem;
   background-color: ${(props) => props.theme.primaryColor};

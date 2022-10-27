@@ -6,7 +6,7 @@ import { ThemeContext } from 'styled-components';
 import SearchBar from '../../components/search/search.component';
 import Dock from '../../components/dock/dock.component';
 import DropDownMenu from '../../components/dropdown-menu/dropdown-menu.component';
-
+import Footer from '../../components/footer/footer.component';
 import NavItem from '../../components/nav-item/nav-item.component';
 import ReactLogoMenu from '../../components/react-logo-item/react-logo-item.component';
 import Initials from '../../components/initials/initials.component';
@@ -89,6 +89,7 @@ const Navigation = () => {
         alt="Michael Duren initials"
       />
       <Dock />
+      <Footer />
     </>
   );
 };
