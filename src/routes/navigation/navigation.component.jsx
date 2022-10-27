@@ -21,46 +21,37 @@ import {
 import lightInitials from '../../images/initials-light-theme.png';
 import darkInitials from '../../images/initials-dark-theme.png';
 
-const reactMenu = [['About This Michael', '/about', 'internal-link', '1a']];
+const reactMenu = [['About This Michael', '/about', 'internal-link']];
 
 const fileMenu = [
   [
     'Crwn-Clothing',
     'https://github.com/michael-duren/crwn-clothing',
     'external-link',
-    '1b',
   ],
   [
     'Michael Duren',
     'https://github.com/michael-duren/michael-duren-portfolio',
     'external-link',
-    '2b',
   ],
   [
     'Password Generator',
     'https://github.com/michael-duren/passwordGenerator',
     'external-link',
-    '3b',
   ],
   [
     'To Do App',
     'https://github.com/michael-duren/passwordGenerator',
     'external-link',
-    '4b',
   ],
 ];
 
 const goMenu = [
-  ['Home', '/', 'internal-link', '1c'],
-  ['About', 'About', 'internal-link', '2c'],
-  [
-    'LinkedIn',
-    'https://www.linkedin.com/in/michael-duren/',
-    'external-link',
-    '3c',
-  ],
-  ['Github', 'https://github.com/michael-duren', 'external-link', '4c'],
-  ['Contact', 'mailto:michaeld@michaelduren.com', 'external-link', '5c'],
+  ['Home', '/', 'internal-link'],
+  ['About', 'About', 'internal-link'],
+  ['LinkedIn', 'https://www.linkedin.com/in/michael-duren/', 'external-link'],
+  ['Github', 'https://github.com/michael-duren', 'external-link'],
+  ['Contact', 'mailto:michaeld@michaelduren.com', 'external-link'],
 ];
 
 const viewMenu = [[null, null, 'button', '1d']];

@@ -3,28 +3,28 @@ import styled from 'styled-components';
 export const DropDownContainer = styled.div`
   position: absolute;
   top: 3rem;
-  /* right: 40px; */
   z-index: 5;
   border-radius: 2rem;
   background-color: ${(props) => props.theme.primaryColor};
   filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
-  /* opacity: 0.7; */
-  justify-content: flex-start;
-  /* border: 1px solid black; */
+  margin: 0.5rem;
+
+  /* justify-content: flex-start; */
 `;
 
-export const DropDownItems = styled.div`
+export const DropDownItem = styled.div`
   /* margin: 2rem auto; */
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  white-space: nowrap;
 `;
 
-export const DropDownItemsButton = styled.button`
+export const DropDownItemButton = styled.button`
   /* margin: auto; */
   border: none;
   font-size: 1.5rem;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: ${(props) => props.theme.primaryColor};
   text-decoration: none;
   text-align: left;
   &:hover {

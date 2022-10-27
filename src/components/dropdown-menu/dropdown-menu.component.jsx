@@ -1,14 +1,15 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
+import { v4 as uuidv4 } from 'uuid';
+
 import {
   DropDownContainer,
-  DropDownItems,
-  DropDownItemsButton,
+  DropDownItem,
+  DropDownItemButton,
 } from './dropdown-menu.component.styles';
 
 import { Toggle } from '../toggle-switch/theme-toggle-switch.component';
-
 import { Link } from 'react-router-dom';
 
 const DropDownMenu = (props) => {
@@ -17,35 +18,39 @@ const DropDownMenu = (props) => {
 
   return (
     <DropDownContainer>
-      <DropDownItems>
-        {items.map((item) => {
-          const [name, location, type, key] = item;
-          switch (type) {
-            case 'external-link':
-              return (
-                <DropDownItemsButton key={key}>
+      {items.map((item) => {
+        const [name, location, type] = item;
+        switch (type) {
+          case 'external-link':
+            return (
+              <DropDownItem key={uuidv4()}>
+                <DropDownItemButton>
                   <a href={location} target="_blank" rel="noreferrer noopener">
                     {name}
                   </a>
-                </DropDownItemsButton>
-              );
-            case 'internal-link':
-              return (
-                <DropDownItemsButton key={key}>
+                </DropDownItemButton>
+              </DropDownItem>
+            );
+          case 'internal-link':
+            return (
+              <DropDownItem key={uuidv4()}>
+                <DropDownItemButton>
                   <Link to={location}>{name}</Link>
-                </DropDownItemsButton>
-              );
-            case 'button':
-              return (
-                <DropDownItemsButton key={key}>
+                </DropDownItemButton>
+              </DropDownItem>
+            );
+          case 'button':
+            return (
+              <DropDownItem key={uuidv4()}>
+                <DropDownItemButton>
                   <Toggle isActive={id === 'dark'} onToggle={setTheme} />
-                </DropDownItemsButton>
-              );
-            default:
-              throw new Error(`${type} is not a valid element`);
-          }
-        })}
-      </DropDownItems>
+                </DropDownItemButton>
+              </DropDownItem>
+            );
+          default:
+            throw new Error(`${type} is not a valid element`);
+        }
+      })}
     </DropDownContainer>
   );
 };
