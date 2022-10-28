@@ -42,6 +42,6 @@ export const DockContainer = styled.div`
   width: 100%;
   color: ${(p) => p.theme.primaryColor};
   text-align: center;
-  margin-top: 70vh;
+  margin-top: 50vh;
   position: fixed;
 `;

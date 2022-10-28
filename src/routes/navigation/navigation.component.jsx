@@ -49,12 +49,12 @@ const fileMenu = [
 const goMenu = [
   ['Home', '/', 'internal-link'],
   ['About', 'About', 'internal-link'],
+  ['Contact', 'Contact', 'internal-link'],
   ['LinkedIn', 'https://www.linkedin.com/in/michael-duren/', 'external-link'],
   ['Github', 'https://github.com/michael-duren', 'external-link'],
-  ['Contact', 'mailto:michaeld@michaelduren.com', 'external-link'],
 ];
 
-const viewMenu = [[null, null, 'button', '1d']];
+const viewMenu = [[null, null, 'button']];
 
 const Navigation = () => {
   const currentDate = new Date().toLocaleDateString();

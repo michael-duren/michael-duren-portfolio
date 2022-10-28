@@ -19,6 +19,7 @@ export const AboutContainer = styled.div`
   transform: translate(-50%, -50%);
   width: 60vw;
   border-radius: 2rem;
+  z-index: 0;
 `;
 
 export const NavContainer = styled.div`

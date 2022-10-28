@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const DropDownContainer = styled.div`
   position: absolute;
   top: 3rem;
-  z-index: 5;
+  z-index: 1;
   border-radius: 2rem;
   background-color: ${(props) => props.theme.primaryColor};
   filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
