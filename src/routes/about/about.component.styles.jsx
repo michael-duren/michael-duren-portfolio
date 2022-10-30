@@ -38,9 +38,3 @@ export const MenuButton = styled.button`
     background-color: ${(props) => props.theme.bodyBackgroundColor};
   }
 `;
-
-export const MichaelImage = styled.img`
-  width: 10rem;
-  border-radius: 50%;
-  opacity: 75%;
-`;

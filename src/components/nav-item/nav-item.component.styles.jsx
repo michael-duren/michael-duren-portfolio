@@ -9,7 +9,7 @@ export const NavLinkContainer = styled.div`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.div`
   padding: 10px 15px;
   cursor: pointer;
   color: ${(props) => props.theme.bodyFontColor};

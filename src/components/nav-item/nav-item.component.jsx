@@ -7,9 +7,7 @@ const NavItem = (props) => {
 
   return (
     <NavLinkContainer>
-      <NavLink href={props.link} onClick={() => setOpen(!open)}>
-        {props.name}
-      </NavLink>
+      <NavLink onClick={() => setOpen(!open)}>{props.name}</NavLink>
       {open && props.children}
     </NavLinkContainer>
   );
