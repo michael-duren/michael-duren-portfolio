@@ -47,11 +47,7 @@ const Contact = () => {
         <button type="submit" value="Send">
           Send
         </button>
-        {sentReciept ? (
-          <SentReciept>Successfully Submitted</SentReciept>
-        ) : (
-          <div></div>
-        )}
+        {sentReciept && <SentReciept>Successfully Submitted</SentReciept>}
         <p>New clients can also email me at michaeld@michaelduren.com</p>
       </form>
       <CloseWindowContainer>

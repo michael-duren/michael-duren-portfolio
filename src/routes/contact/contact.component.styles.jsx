@@ -8,6 +8,7 @@ export const FormContainer = styled.div`
   display: flex;
   margin: 10rem auto;
   justify-content: center;
+  border: 0.5px solid ${(props) => props.theme.bodyFontColor};
 
   form {
     display: flex;
@@ -25,6 +26,7 @@ export const FormContainer = styled.div`
     border: none;
     margin: 1rem 0rem;
     font-family: 'Inter', sans-serif;
+    border: 0.5px solid ${(props) => props.theme.bodyFontColor};
   }
 
   button {
@@ -35,6 +37,7 @@ export const FormContainer = styled.div`
     cursor: pointer;
     border-radius: 1rem;
     transition-duration: 1s;
+    border: 0.5px solid ${(props) => props.theme.bodyFontColor};
 
     &:hover {
       padding: 1.25rem;

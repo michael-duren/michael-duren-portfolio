@@ -16,9 +16,6 @@ export const IconButton = styled(Link)`
   border-radius: 2rem;
   background-color: ${(props) => props.theme.primaryColor};
   cursor: pointer;
-  &:hover {
-    background-color: ${(props) => props.theme.bodyBackgroundColor};
-  }
 
   /* position: fixed; */
 `;

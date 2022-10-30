@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const DropDownContainer = styled.div`
   position: absolute;
   top: 3rem;
-  z-index: 1;
+  z-index: 9999;
   border-radius: 2rem;
   background-color: ${(props) => props.theme.primaryColor};
   border: 0.5px solid ${(props) => props.theme.bodyFontColor};

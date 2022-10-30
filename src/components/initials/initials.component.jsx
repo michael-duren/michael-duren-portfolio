@@ -8,7 +8,7 @@ const Initials = styled.img`
   left: 50%;
   margin-top: -350px; /* Negative half of height. */
   margin-left: -50px; /* Negative half of width. */
-  z-index: -1;
+  z-index: -2;
 `;
 
 export default Initials;
