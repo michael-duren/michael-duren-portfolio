@@ -6,11 +6,9 @@ import {
   NavContainer,
   MenuButton,
   MenuButtons,
-  CloseWindowLight,
-  CloseWindowDark,
-  IconButton,
   MichaelImage,
 } from './about.component.styles';
+import CloseWindowButton from '../../components/close-window/close-window.component';
 
 import michaelAvatar from '../../images/Avatar.png';
 
@@ -79,9 +77,7 @@ const About = () => {
         <MenuButtons>
           <MenuButton onClick={onClickOverview}>Overview</MenuButton>
           <MenuButton onClick={onClickUses}>Uses</MenuButton>
-          <IconButton to="/">
-            {id === 'light' ? <CloseWindowLight /> : <CloseWindowDark />}
-          </IconButton>
+          <CloseWindowButton id={id} />
         </MenuButtons>
       </NavContainer>
       {renderAboutComponent()}

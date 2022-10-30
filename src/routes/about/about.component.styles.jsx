@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-import { ReactComponent as LightCloseWindow } from '../../assets/light-theme/close-window-light-theme.svg';
-import { ReactComponent as DarkCloseWindow } from '../../assets/dark-theme/close-window-dark-theme.svg';
-
-import { Link } from 'react-router-dom';
-
 export const AboutContainer = styled.div`
   /* display: flex; */
   flex-direction: column;
@@ -42,24 +37,6 @@ export const MenuButton = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.bodyBackgroundColor};
   }
-`;
-
-export const IconButton = styled(Link)`
-  border-radius: 2rem;
-  background-color: ${(props) => props.theme.primaryColor};
-  cursor: pointer;
-  &:hover {
-    background-color: ${(props) => props.theme.bodyBackgroundColor};
-  }
-
-  /* position: fixed; */
-`;
-
-export const CloseWindowLight = styled(LightCloseWindow)`
-  height: 1.5rem;
-`;
-export const CloseWindowDark = styled(DarkCloseWindow)`
-  height: 1.5rem;
 `;
 
 export const MichaelImage = styled.img`
