@@ -3,7 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
 	body {
 		background: ${(p) => p.theme.bodyBackgroundColor};
-    
 		color: ${(p) => p.theme.bodyFontColor};
 		margin: 0 1rem;
 		font-family: 'Inter', sans-serif;

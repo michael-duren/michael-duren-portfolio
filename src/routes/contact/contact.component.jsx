@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FormContainer } from './contact.component.styles';
+import CloseWindowButton from '../../components/close-window/close-window.component';
 
 const Contact = () => {
   const form = useRef();
@@ -36,6 +37,7 @@ const Contact = () => {
         <textarea name="message" />
         <input type="submit" value="Send" />
       </form>
+      <CloseWindowButton />
     </FormContainer>
   );
 };
