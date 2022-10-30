@@ -7,6 +7,7 @@ export const DockButton = styled.button`
   border-radius: 1rem;
   transition-duration: 3s;
   margin-bottom: 1rem;
+  border: 0.5px solid ${(props) => props.theme.bodyFontColor};
   @keyframes fadeInAnimation {
     0% {
       margin-bottom: 0rem;

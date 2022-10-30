@@ -10,6 +10,7 @@ export const NavigationContainer = styled.div`
   border-radius: 2rem;
   width: 100%;
   transition-duration: 500ms;
+  border: 0.5px solid ${(props) => props.theme.bodyFontColor};
 
   &:hover {
     background-color: ${(p) => p.theme.primaryColor};

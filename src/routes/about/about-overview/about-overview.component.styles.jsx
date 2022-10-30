@@ -20,6 +20,7 @@ export const ImageContainer = styled.div`
 
 export const ContentContainer = styled.div`
   padding-left: 3rem;
+  padding-right: 1rem;
   margin-bottom: 2rem;
   h1 {
     padding-bottom: 1rem;

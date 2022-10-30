@@ -33,6 +33,7 @@ export const Title = styled.div`
 
 export const HomeWindowContainer = styled.div`
   background-color: ${(props) => props.theme.primaryColor};
+  border: 0.5px solid ${(props) => props.theme.bodyFontColor};
   display: flex;
   flex-direction: column;
   width: 50vh;

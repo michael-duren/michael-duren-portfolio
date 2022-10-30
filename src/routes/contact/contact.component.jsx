@@ -1,10 +1,17 @@
-import { useRef } from 'react';
+import { useRef, useContext, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { FormContainer } from './contact.component.styles';
+import {
+  FormContainer,
+  CloseWindowContainer,
+  SentReciept,
+} from './contact.component.styles';
 import CloseWindowButton from '../../components/close-window/close-window.component';
+import { ThemeContext } from 'styled-components';
 
 const Contact = () => {
+  const { id } = useContext(ThemeContext);
   const form = useRef();
+  const [sentReciept, setSentReciept] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -19,9 +26,11 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setSentReciept(true);
         },
         (error) => {
           console.log(error.text);
+          setSentReciept(false);
         }
       );
   };
@@ -30,14 +39,24 @@ const Contact = () => {
     <FormContainer>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
-        <input type="text" name="user_name" />
+        <input type="text" name="user_name" required />
         <label>Email</label>
-        <input type="email" name="user_email" />
+        <input type="email" name="user_email" required />
         <label>Message</label>
         <textarea name="message" />
-        <input type="submit" value="Send" />
+        <button type="submit" value="Send">
+          Send
+        </button>
+        {sentReciept ? (
+          <SentReciept>Successfully Submitted</SentReciept>
+        ) : (
+          <div></div>
+        )}
+        <p>New clients can also email me at michaeld@michaelduren.com</p>
       </form>
-      <CloseWindowButton />
+      <CloseWindowContainer>
+        <CloseWindowButton id={id} />
+      </CloseWindowContainer>
     </FormContainer>
   );
 };

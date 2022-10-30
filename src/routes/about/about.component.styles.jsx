@@ -7,6 +7,7 @@ export const AboutContainer = styled.div`
   min-height: 20rem;
   align-items: center;
   background-color: ${(p) => p.theme.primaryColor};
+  border: 0.5px solid ${(props) => props.theme.bodyFontColor};
   position: fixed;
   top: 50%;
   left: 50%;

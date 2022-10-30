@@ -6,7 +6,7 @@ export const DropDownContainer = styled.div`
   z-index: 1;
   border-radius: 2rem;
   background-color: ${(props) => props.theme.primaryColor};
-  filter: drop-shadow(1px 1px 5px ${(props) => props.theme.dropShadowColor});
+  border: 0.5px solid ${(props) => props.theme.bodyFontColor};
   margin: 0.5rem;
 `;
 
