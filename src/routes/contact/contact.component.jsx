@@ -7,11 +7,13 @@ import {
 } from './contact.component.styles';
 import CloseWindowButton from '../../components/close-window/close-window.component';
 import { ThemeContext } from 'styled-components';
+import { Spinner } from '../../components/spinner/spinner.component.styles';
 
 const Contact = () => {
   const { id } = useContext(ThemeContext);
   const form = useRef();
   const [sentReciept, setSentReciept] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -35,17 +37,31 @@ const Contact = () => {
       );
   };
 
+  const submitHandler = () => {
+    if (!sentReciept) {
+      setLoading(true);
+    } else {
+      setLoading(false);
+    }
+  };
+
   return (
     <FormContainer>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" required />
-        <label>Email</label>
-        <input type="email" name="user_email" required />
-        <label>Message</label>
-        <textarea name="message" />
-        <button type="submit" value="Send">
-          Send
+        {loading ? (
+          <Spinner />
+        ) : (
+          <>
+            <label>Name</label>
+            <input type="text" name="user_name" required />
+            <label>Email</label>
+            <input type="email" name="user_email" required />
+            <label>Message</label>
+            <textarea name="message" />
+          </>
+        )}
+        <button type="submit" value="Send" onClick={submitHandler}>
+          {loading === true ? 'Sent!' : 'Send'}
         </button>
         {sentReciept && <SentReciept>Successfully Submitted</SentReciept>}
         <p>New clients can also email me at michaeld@michaelduren.com</p>
