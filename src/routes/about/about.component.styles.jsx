@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   flex-grow: 1;
-  height: 50vh;
   min-height: 20rem;
   align-items: center;
   background-color: ${(p) => p.theme.primaryColor};
@@ -19,12 +18,10 @@ export const AboutContainer = styled.div`
 
 export const NavContainer = styled.div`
   margin-top: 2rem;
-`;
-
-export const MenuButtons = styled.div`
   display: flex;
-  /* align-items: flex-start; */
-  justify-content: space-evenly;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 0.5rem;
 `;
 
 export const MenuButton = styled.button`

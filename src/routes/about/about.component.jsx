@@ -5,12 +5,11 @@ import {
   AboutContainer,
   NavContainer,
   MenuButton,
-  MenuButtons,
 } from './about.component.styles';
 import CloseWindowButton from '../../components/close-window/close-window.component';
 
 import AboutOverview from './about-overview/about-overview.component';
-import AboutUses from './about-uses/about-uses.component.styles';
+import AboutUses from './about-uses/about-uses.component';
 
 const About = () => {
   const [content, setContent] = useState('overview');
@@ -46,11 +45,9 @@ const About = () => {
   return (
     <AboutContainer>
       <NavContainer>
-        <MenuButtons>
-          <MenuButton onClick={onClickOverview}>Overview</MenuButton>
-          <MenuButton onClick={onClickUses}>Uses</MenuButton>
-          <CloseWindowButton id={id} />
-        </MenuButtons>
+        <MenuButton onClick={onClickOverview}>Overview</MenuButton>
+        <MenuButton onClick={onClickUses}>Uses</MenuButton>
+        <CloseWindowButton id={id} />
       </NavContainer>
       {renderAboutComponent()}
     </AboutContainer>
