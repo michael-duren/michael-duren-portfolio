@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const DockButton = styled.button`
   background-color: ${(p) => p.theme.primaryColor};
@@ -28,6 +29,15 @@ export const DockButton = styled.button`
 `;
 
 export const DockItem = styled.a`
+  margin: 0 0.25rem;
+  &:hover {
+    background-color: ${(p) => p.theme.primaryColor};
+    border-radius: 2rem;
+    height: 100%;
+  }
+`;
+
+export const DockInternalItem = styled(Link)`
   margin: 0 0.25rem;
   &:hover {
     background-color: ${(p) => p.theme.primaryColor};

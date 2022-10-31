@@ -6,7 +6,12 @@ import { ReactComponent as GitHubDark } from '../../assets/dark-theme/github-dar
 import { ReactComponent as MusicLight } from '../../assets/light-theme/music-light.svg';
 import { ReactComponent as MusicDark } from '../../assets/dark-theme/music-dark-theme.svg';
 
-import { DockButton, DockItem, DockContainer } from './dock.componet.styles';
+import {
+  DockButton,
+  DockItem,
+  DockInternalItem,
+  DockContainer,
+} from './dock.componet.styles';
 
 const Dock = () => {
   const { id } = useContext(ThemeContext);
@@ -17,9 +22,9 @@ const Dock = () => {
         <DockItem href="https://github.com/michael-duren">
           {id === 'light' ? <GitHubLight /> : <GitHubDark />}
         </DockItem>
-        <DockItem href="/">
+        <DockInternalItem to="/music">
           {id === 'light' ? <MusicLight /> : <MusicDark />}
-        </DockItem>
+        </DockInternalItem>
       </DockButton>
     </DockContainer>
   );
