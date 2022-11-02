@@ -1,9 +1,22 @@
 import { ControlsContainer } from './controls.component.styles';
 
-const Controls = () => {
+import {
+  DarkPlayButton,
+  DarkPauseButton,
+  DarkForwardsButton,
+  DarkBackwardsButton,
+} from './controls.component.styles';
+
+const Controls = (props) => {
   return (
     <ControlsContainer>
-      <p>Play/Pause</p>
+      <DarkBackwardsButton onClick={() => props.SkipSong(false)} />
+      {props.isPlaying ? (
+        <DarkPauseButton onClick={() => props.setIsPlaying(!props.isPlaying)} />
+      ) : (
+        <DarkPlayButton onClick={() => props.setIsPlaying(!props.isPlaying)} />
+      )}
+      <DarkForwardsButton onClick={() => props.SkipSong()} />
     </ControlsContainer>
   );
 };

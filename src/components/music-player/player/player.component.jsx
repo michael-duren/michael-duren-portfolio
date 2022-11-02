@@ -1,22 +1,53 @@
-import {
-  PlayerContainer,
-  SongImage,
-  PlayerDetails,
-} from './player.component.styles';
+import { useEffect, useRef, useState } from 'react';
 
-import albumImage from '../../../images/darknight.jpg';
+import mp3 from '../../../songs/Dream.mp3';
 
-import Controls from '../controls/controls.component';
+import { PlayerContainer } from './player.component.styles';
 
-const Player = () => {
+import PlayerDetails from '../player-details/player-details.component.styles';
+
+const Player = (props) => {
+  const audioElement = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioElement.current.play();
+    } else {
+      audioElement.current.pause();
+    }
+  });
+
+  // const SkipSong = (forwards = true) => {
+  //   if (forwards) {
+  //     props.setCurrentSongIndex(() => {
+  //       let temp = props.currentSongIndex;
+  //       temp++;
+
+  //       if (temp > props.songs.length - 1) {
+  //         temp = 0;
+  //       }
+
+  //       return temp;
+  //     });
+  //   } else {
+  //     props.setCurrentSongIndex(() => {
+  //       let temp = props.currentSongIndex;
+  //       temp--;
+
+  //       if (temp < 0) {
+  //         temp = props.songs.length - 1;
+  //       }
+
+  //       return temp;
+  //     });
+  //   }
+  // };
+
   return (
     <PlayerContainer>
-      <SongImage src={albumImage} alt="stary sky" />
-      <PlayerDetails>
-        <h2>Title</h2>
-        <h3>Artist</h3>
-        <Controls />
-      </PlayerDetails>
+      <audio src={mp3} ref={audioElement} />
+      <PlayerDetails isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
     </PlayerContainer>
   );
 };
